@@ -35,6 +35,10 @@ return (
             <meta key={index} name={name} content={content}/>
         ))}
     </Head>
-)
+);
+}
 
+SEO.defaultProps = {
+    lang: 'en',
+    meta: [],
 }
