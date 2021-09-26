@@ -1,17 +1,30 @@
 import React, { useState } from "react";
 import {Link} from 'react-scroll';
 import styled from 'styled-components';
-import Image from 'next/image';
+import NavItems from './NavbarData';
 import RedLogo from '../../assets/Logos/Logo.png';
-import { styles } from "styled-system";
+import Sticky from "react-stickynode";
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
+
+  const handleStateChange = (status) => {
+    if(status.status === Sticky.STATUS_FIXED){
+        setIsSticky(true);
+    }else if(status.status === Sticky.STATUS_ORIGINAL) {
+        setIsSticky(false)
+    }
+};
+
+
+
+
 
   return (
+    <Sticky>
     <Nav>
         <LeftHeader>
       <Link to="/">
-        <Image src={RedLogo} alt='Logo' className='header-logo'/>
       </Link>
       </LeftHeader>
       <Hamburger onClick={() => setIsOpen(!isOpen)}>
@@ -21,37 +34,44 @@ function Navbar() {
         <span />
       </Hamburger>
       <Menu isOpen={isOpen}>
-        <MenuLink href="">News</MenuLink>
-        <MenuLink href="">Tools</MenuLink>
-        <MenuLink href="">About</MenuLink>
-        <MenuLink href=""> Blog</MenuLink>
-        <MenuLink href="">Events</MenuLink>
+{NavItems.map((item, index) => (
+<LinkItem key={index} style={{cursor: 'pointer'}}>
+  <Link
+  activeClass='active'
+  to={item.path}
+  spy={true}
+  smooth={true}
+  offset={-70}
+  duration={500}
+  >
+    {item.label}
+  </Link>
+  </LinkItem>
+))}
         <MenuButton>
-          <Link to="/login" className="nav-buttons">
+          <Link to="/login">
             Login
           </Link>
         </MenuButton>
         <MenuButton>
-          <Link to="/discord" className="nav-buttons">
+          <Link to="/discord">
             Join Our Discord Server
           </Link>
         </MenuButton>
       </Menu>
     </Nav>
+    </Sticky>
   );
 }
 
 export default Navbar;
 
-const stylers = {
-    headerLogo: {
-        height: '20px',
-        width: '20px',
 
-    }
-}
-
-
+const LinkItem = styled.div`
+padding: 5px;
+color: white;
+margin: 20px;
+`
 
 const LeftHeader = styled.div`
 display:flex;
@@ -69,7 +89,8 @@ export const Nav = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  background: none;
+
+  position: sticky;
 
 `;
 
@@ -77,6 +98,8 @@ export const Hamburger = styled.div`
   flex-direction: column;
   cursor: pointer;
   display: none;
+  margin-right: 30px;
+  margin-top: 20px;
 
   span {
     height: 2px;
@@ -111,6 +134,7 @@ export const Menu = styled.div`
     max-height: ${({ isOpen }) => (isOpen ? "500px" : "0")};
     transition: max-height 0.3s ease-in;
     width: 100%;
+  
   }
 
 
@@ -123,8 +147,7 @@ export const MenuLink = styled.a`
   text-align: center;
   text-decoration: none;
   transition: all 0.3s ease-in;
-  
-  color: white;
+color: white;
 
   float:left;
 
