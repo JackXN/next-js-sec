@@ -2,24 +2,8 @@ import React from "react";
 import { Flex, Container, Box, Text } from "@chakra-ui/react";
 import styled from "styled-components";
 import { style } from "styled-system";
+import HeroData from './HeroData';
 
-const HeroData = {
-  titleOne: {
-    id: 1,
-    name: "top",
-    text: "Apex Security is a locally owned Cybersecurity Company",
-  },
-  titleTwo: {
-    id: 2,
-    name: "title",
-    text: "Can Your Network Or Website Be Hacked?",
-  },
-  titleThree: {
-    id: 3,
-    name: "description",
-    text: "From large Fortune 500 companies to local small businesses, we are here to help secure your most valuable data.  Our solutions meet your needs and requirements. When your ready to secure your organization, choose us as your partner",
-  },
-};
 
 
 function Hero() {
