@@ -28,10 +28,11 @@ const HeroData = {
 function Hero() {
   return (
     <HeroContainer>
+
+      <Flex sx={styles.flexContainer}>
       <Text as="p" sx={styles.top}>
         {HeroData.titleOne.text}
       </Text>
-      <Flex sx={styles.flexContainer}>
         <Text as="h1" sx={styles.title}>
          Can Your Website Or <br/> Network Be Hacked?
         </Text>
@@ -59,6 +60,7 @@ const styles = {
       color: "white",
       mt: "50px",
       flexDirection: "column",
+      pl: [null,null,null,null,,null,'150px'],
     },
     top: {
       pb: "20px",
@@ -69,13 +71,14 @@ const styles = {
       text:'center',
     },
     title: {
-      fontSize: ['30px', null, '45', '50px'],
+      fontSize: ['30px', null, '45px', '80px'],
+      lineHeight: ['30px', '50px',null, '90px'],
       fontWeight: "black",
     },
     description: {
-      fontSize: ['20px', null, '25px', '25px'],
+      fontSize: ['20px', null, '25px', '16px', '20px'],
       fontWeight: "medium",
-      maxWidth: "900px",
+      maxWidth: "650px",
       mt: "25px",
     },
     buttons:{
