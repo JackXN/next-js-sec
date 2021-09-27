@@ -1,9 +1,17 @@
+ /** @jsxImportSource theme-ui */
 import React, { useState } from "react";
 import {Link} from 'react-scroll';
 import styled from 'styled-components';
 import NavItems from './NavbarData';
 import RedLogo from '../../assets/Logos/Logo.png';
 import Sticky from "react-stickynode";
+import {Button} from "@chakra-ui/react";
+
+
+
+
+
+
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
@@ -24,8 +32,7 @@ function Navbar() {
     <Sticky>
     <Nav>
         <LeftHeader>
-      <Link to="/">
-      </Link>
+          <Link style={{color: 'white'}} to='/'>Apex Security</Link>
       </LeftHeader>
       <Hamburger onClick={() => setIsOpen(!isOpen)}>
         <span />
@@ -48,16 +55,11 @@ function Navbar() {
   </Link>
   </LinkItem>
 ))}
-        <MenuButton>
-          <Link to="/login">
-            Login
+       <Button bg='#AD0441' fontSize='15' p='4' color='white'>
+          <Link to="/login" >
+           Get A Quote
           </Link>
-        </MenuButton>
-        <MenuButton>
-          <Link to="/discord">
-            Join Our Discord Server
-          </Link>
-        </MenuButton>
+          </Button>
       </Menu>
     </Nav>
     </Sticky>
@@ -67,30 +69,39 @@ function Navbar() {
 export default Navbar;
 
 
+const buttonStyles = {
+  main: {
+    color: 'red',
+  }
+}
+
+
+
 const LinkItem = styled.div`
-padding: 5px;
+padding: 6px;
 color: white;
 margin: 20px;
+font-family: 'Barlow Condensed', sans-serif;
+font-size: 25px;
 `
 
 const LeftHeader = styled.div`
 display:flex;
 align-items:center;
 justify-content: center;
-
 `
 
 
 
 export const Nav = styled.div`
-
+border-bottom: solid gray 1px;
+border-top: solid gray 1px;
   display: flex;
+  padding: 20px;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+justify-content: space-between;
   flex-wrap: wrap;
 
-  position: sticky;
 
 `;
 
@@ -100,6 +111,7 @@ export const Hamburger = styled.div`
   display: none;
   margin-right: 30px;
   margin-top: 20px;
+  
 
   span {
     height: 2px;
