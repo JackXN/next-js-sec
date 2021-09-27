@@ -6,8 +6,7 @@ import NavItems from './NavbarData';
 import RedLogo from '../../assets/Logos/Logo.png';
 import Sticky from "react-stickynode";
 import {Button} from "@chakra-ui/react";
-
-
+import { Img, Box, Text } from "@chakra-ui/react"
 
 
 
@@ -30,9 +29,12 @@ function Navbar() {
 
   return (
     <Sticky>
+    <Box>
+      <Text as='p'>Hello</Text>
+    </Box>
     <Nav>
         <LeftHeader>
-          <Link style={{color: 'white'}} to='/'>Apex Security</Link>
+    <Img src={RedLogo} alt='logo'/>
       </LeftHeader>
       <Hamburger onClick={() => setIsOpen(!isOpen)}>
         <span />
