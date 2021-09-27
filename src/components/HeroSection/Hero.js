@@ -2,6 +2,7 @@ import React from "react";
 import { Flex, Container, Box, Text, Button } from "@chakra-ui/react";
 import styled from "styled-components";
 import { style } from "styled-system";
+import ServiceCards from '../ServiceCards/ServiceCards';
 
 
 
@@ -42,6 +43,7 @@ function Hero() {
 <Button sx={styles.buttons.secondary}>About Us</Button>
 </Flex>
       </Flex>
+      <ServiceCards/>
     </HeroContainer>
   );
 }
