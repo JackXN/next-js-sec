@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { style } from "styled-system";
 
 
+
 const HeroData = {
     titleOne: {
       id: 1,
@@ -59,18 +60,20 @@ const styles = {
     },
     top: {
       pb: "20px",
-      color: "gray",
+      color: "white",
       mt: "20px",
+      fontSize: ['10px',null,null,'15px'],
       fontWeight: "bold",
+      text:'center',
     },
     title: {
-      fontSize: "2.5rem",
+      fontSize: ['30px', null, '45', '50px'],
       fontWeight: "black",
     },
     description: {
-      fontSize: "1.3rem",
+      fontSize: ['20px', null, '25px', '25px'],
       fontWeight: "medium",
-      mw: "600px",
+      maxWidth: "900px",
       mt: "25px",
     },
     buttons:{
@@ -78,7 +81,7 @@ const styles = {
         align: 'center',
         justify: 'space-between',
         padding: '20px',
-
+        mt: [null,null,null,'20px'],
         
       },
       primary: {
@@ -88,6 +91,7 @@ const styles = {
         backgroundColor: '#AD0441',
         color: 'white',
         borderRadius: 'none',
+        fontSize: ['15px', null,'20px'],
       },
       secondary: {
         padding: '20px',
@@ -95,6 +99,8 @@ const styles = {
         backgroundColor: '#191A1B',
         color: 'white',
         borderRadius: 'none',
+        fontSize: ['15px', null,'20px'],
+      
       },
   
     }

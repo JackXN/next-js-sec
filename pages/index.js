@@ -1,4 +1,3 @@
-import { ThemeProvider,Box } from 'theme-ui';
 import theme from '../src/theme/index';
 import Navbar from '../src/components/Navbar/Navbar';
 import Layout from '../src/components/layout';
@@ -20,9 +19,8 @@ background-size: cover;
 background-repeat: no-repeat;
 background-attachment: fixed;
 background-position: center;
-height: 100vh;
+height: 200vh;
 width: 100%;
-overflow-y: hidden;
 
 `
 
@@ -35,8 +33,8 @@ background-attachment: fixed;
 background-repeat: no-repeat;
 background-position:center;
 background-size: cover;
-overflow: hidden;
 `
+
 
 
 
