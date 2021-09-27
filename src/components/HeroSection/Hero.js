@@ -60,7 +60,7 @@ const styles = {
       color: "white",
       mt: "50px",
       flexDirection: "column",
-      pl: [null,null,null,null,,null,'150px'],
+      pl: [null,null,null,null,,null,'150px', '350x'],
     },
     top: {
       pb: "20px",
@@ -76,9 +76,9 @@ const styles = {
       fontWeight: "black",
     },
     description: {
-      fontSize: ['20px', null, '25px', '16px', '20px'],
+      fontSize: ['20px', null, '25px', '16px', '20px', '30px'],
       fontWeight: "medium",
-      maxWidth: "650px",
+      maxWidth: ["650px", '900px'],
       mt: "25px",
     },
     buttons:{
@@ -86,25 +86,25 @@ const styles = {
         align: 'center',
         justify: 'space-between',
         padding: '20px',
-        mt: [null,null,null,'20px'],
+        mt: [null,null,null,'20px',],
         
       },
       primary: {
-        padding: '20px',
+        padding: '25px',
         margin:'10px',
         ml:'-20px',
         backgroundColor: '#AD0441',
         color: 'white',
         borderRadius: 'none',
-        fontSize: ['15px', null,'20px'],
+        fontSize: ['15px', null,'20px','25px' ],
       },
       secondary: {
-        padding: '20px',
+        padding: '25px',
         margin:'10px',
         backgroundColor: '#191A1B',
         color: 'white',
         borderRadius: 'none',
-        fontSize: ['15px', null,'20px'],
+        fontSize: ['15px', null,'20px', '25px'],
       
       },
   
