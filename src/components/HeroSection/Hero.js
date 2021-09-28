@@ -72,8 +72,8 @@ const styles = {
       mr: '10px',
     },
     title: {
-      fontSize: ['35px', null, '45px', '80px'],
-      lineHeight: ['35px', '50px',null, '90px'],
+      fontSize: ['40px', null, '45px', '80px'],
+      lineHeight: ['42px', '50px',null, '90px'],
       fontWeight: "black",
     },
     description: {
