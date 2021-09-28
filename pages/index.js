@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import {Flex} from '@chakra-ui/react';
 import Head from 'next/head';
 import HeroSection from '../src/components/HeroSection/Hero';
-// import { styles } from 'styled-system';
+
 
 
 

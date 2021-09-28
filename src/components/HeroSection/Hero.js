@@ -69,14 +69,15 @@ const styles = {
       fontSize: ['10px',null,null,'15px'],
       fontWeight: "bold",
       text:'center',
+      mr: '10px',
     },
     title: {
-      fontSize: ['30px', null, '45px', '80px'],
+      fontSize: ['40px', null, '45px', '80px'],
       lineHeight: ['30px', '50px',null, '90px'],
       fontWeight: "black",
     },
     description: {
-      fontSize: ['20px', null, '25px', '16px', '20px', '30px'],
+      fontSize: ['25px', null, '25px', '16px', '20px', '30px'],
       fontWeight: "medium",
       maxWidth: ["650px", '900px'],
       mt: "25px",
