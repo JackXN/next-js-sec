@@ -3,16 +3,11 @@ import React, { useState } from "react";
 import {Link} from 'react-scroll';
 import styled from 'styled-components';
 import NavItems from './NavbarData';
-
 import Sticky from "react-stickynode";
 import {Button,} from "@chakra-ui/react";
 import { Box, Text } from "@chakra-ui/react"
 import {Image} from 'theme-ui'
-
-
-
-
-
+import {AiFillHome as Home} from 'react-icons/ai';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,7 +23,12 @@ function Navbar() {
 
 
 
+const topStyles = {
+  left: {
+  display: 'flex',
 
+  }
+}
 
   return (
     <Sticky>
@@ -57,7 +57,7 @@ function Navbar() {
   </Link>
   </LinkItem>
 ))}
-       <Button bg='#AD0441' fontSize='15px' p='4' color='white'>
+       <Button bg='#AD0441' fontSize='15px' p='4' color='white' sx={buttonStyles.main}>
           <Link to="/login" >
            Get A Quote
           </Link>
@@ -73,7 +73,7 @@ export default Navbar;
 
 const buttonStyles = {
   main: {
-    color: 'red',
+  fontSize: ['15', null,null,null,'20px']
 }
 }
 
@@ -92,6 +92,11 @@ margin: 20px;
 font-family: 'Barlow Condensed', sans-serif;
 font-weight: light;
 font-size: 20px;
+
+
+@media(min-width: 1500px) {
+  font-size: 25px;
+}
 `
 
 const LeftHeader = styled.div`
@@ -100,18 +105,19 @@ align-items:center;
 justify-content: center;
 height: 90px;
 text-align:center;
-
 `
 
 
 
+
 export const Nav = styled.div`
-border-bottom: solid gray 1px;
-border-top: solid gray 1px;
+
   display: flex;
   flex-direction: row;
 justify-content: space-between;
   flex-wrap: wrap;
+
+
 
 
 `;
@@ -158,8 +164,13 @@ export const Menu = styled.div`
     max-height: ${({ isOpen }) => (isOpen ? "500px" : "0")};
     transition: max-height 0.3s ease-in;
     width: 100%;
-  
   }
+
+  @media(min-width: 1500px) {
+    margin-right: 200px;
+  }
+
+
 
 
 

@@ -9,6 +9,7 @@ import ServiceCardColumn from './ServiceCardColumn';
 const imageOne = '/user.svg'
 const imageTwo = '/database.svg'
 const imageThree = '/lock-alt.svg'
+const imageFour = '/test.svg'
 
 const data  = [
     {
@@ -43,7 +44,6 @@ function ServiceCards({
                 title={item.title}
                 text={item.text}
                 src={item.imgSrc}
-
                 />
             ))}
         </Box>

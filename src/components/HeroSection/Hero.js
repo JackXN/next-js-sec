@@ -60,7 +60,7 @@ const styles = {
       color: "white",
       mt: "50px",
       flexDirection: "column",
-      pl: [null,null,null,null,,null,'150px', '350x'],
+      pl: [,'0px','50px',null, null,'150px'],
     },
     top: {
       pb: "20px",

@@ -38,10 +38,16 @@ const styles = {
       borderRadius: '20px',
       maxHeight: '500px',
      margin: ['20px',null,null,null,,null,'150px'],
-     transition: 'all 300ms ease-in',
+     boxShadow: 'inset 0 0 0 0 #D80286',
+    webkitTransition: "ease-out 0.4s",
+  mozTransition: "ease-out 0.4s",
+  transition: "ease-out 0.4s",
+     borderRight: 'solid #AD0441 1px ',
     '&:hover': {
         backgroundColor:'#191A1B',
         cursor:'pointer',
+        boxShadow: 'inset 400px 0 0 0 $D80286',
+        
      }
   },
   wrapper: {
