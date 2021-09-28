@@ -66,14 +66,14 @@ const styles = {
       pb: "20px",
       color: "white",
       mt: "20px",
-      fontSize: ['10px',null,null,'15px'],
+      fontSize: ['10px','15px',null,'15px'],
       fontWeight: "bold",
       text:'center',
       mr: '10px',
     },
     title: {
-      fontSize: ['40px', null, '45px', '80px'],
-      lineHeight: ['30px', '50px',null, '90px'],
+      fontSize: ['35px', null, '45px', '80px'],
+      lineHeight: ['35px', '50px',null, '90px'],
       fontWeight: "black",
     },
     description: {
