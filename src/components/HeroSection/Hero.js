@@ -72,7 +72,7 @@ const styles = {
       mr: '10px',
     },
     title: {
-      fontSize: ['40px', null, '45px', '80px'],
+      fontSize: ['90px', null, '45px', '80px'],
       lineHeight: ['30px', '50px',null, '90px'],
       fontWeight: "black",
     },
