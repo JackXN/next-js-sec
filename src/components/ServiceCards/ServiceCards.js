@@ -9,7 +9,7 @@ import ServiceCardColumn from './ServiceCardColumn';
 const imageOne = '/user.svg'
 const imageTwo = '/database.svg'
 const imageThree = '/lock-alt.svg'
-const imageFour = '/test.svg'
+
 
 const data  = [
     {

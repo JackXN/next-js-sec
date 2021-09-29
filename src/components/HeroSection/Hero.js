@@ -40,8 +40,20 @@ function Hero() {
           {HeroData.titleThree.text}
         </Text>
 <Flex sx={styles.buttons.container}>
-<Button sx={styles.buttons.primary}>Learn More</Button>
-<Button sx={styles.buttons.secondary}>About Us</Button>
+<Button sx={styles.buttons.primary}
+as='button'
+_hover={{boxShadow: 'inset -3.5em 0 0 0 var(--hover)',  boxShadow: 'inset 3.5em 0 0 0 var(--hover)'}}
+focus={{boxShadow: 'inset -3.5em 0 0 0 var(--hover)',  boxShadow: 'inset 3.5em 0 0 0 var(--hover)'}}
+color='var(--color)'
+transition='0.25s'
+>Learn More</Button>
+<Button 
+_hover={{boxShadow: 'inset -3.5em 0 0 0 var(--hover)',  boxShadow: 'inset 3.5em 0 0 0 var(--hover)'}}
+focus={{boxShadow: 'inset -3.5em 0 0 0 var(--hover)',  boxShadow: 'inset 3.5em 0 0 0 var(--hover)'}}
+color='var(--color)'
+transition='0.25s'
+
+sx={styles.buttons.secondary}>About Us</Button>
 </Flex>
       </Flex>
       <ServiceCards/>
@@ -69,15 +81,15 @@ const styles = {
       fontSize: ['10px','15px',null,'15px'],
       fontWeight: "bold",
       text:'center',
-      mr: '10px',
+      ml: [null,'10px']
     },
     title: {
-      fontSize: ['40px', null, '45px', '80px'],
-      lineHeight: ['42px', '50px',null, '90px'],
+      fontSize: ['40px', '45px', '80px'],
+      lineHeight: ['42px', '50px', '90px'],
       fontWeight: "black",
     },
     description: {
-      fontSize: ['25px', null, '25px', '16px', '20px', '30px'],
+      fontSize: ['25px', null, '25px', '20px', '30px'],
       fontWeight: "medium",
       maxWidth: ["650px", '900px'],
       mt: "25px",
@@ -87,25 +99,52 @@ const styles = {
         align: 'center',
         justify: 'space-between',
         padding: '20px',
-        mt: [null,null,null,'20px',],
+        mt: [null,null,null,'20px'],
+
+     
         
       },
       primary: {
         padding: '25px',
         margin:'10px',
         ml:'-20px',
-        backgroundColor: '#AD0441',
+        background: 'linear-gradient(to right, #040405 50%, #AD0541 50%)',
         color: 'white',
+        transition: 'all .5s ease-out',
         borderRadius: 'none',
         fontSize: ['15px', null,'20px','25px' ],
+        backgroundPosition:" right bottom",
+        backgroundSize: '200% 100%',
+        transition: '0.25s',
+      '&:focus': {
+        inset: '-3.5rem 0 0 0 var(--hover)',
+        inset: '3.5rem 0 0 0 var(--hover)',
+       } ,
+        '&:hover': {
+          backgroundPosition: 'left bottom',
+          color: 'white'
+        },
       },
       secondary: {
         padding: '25px',
         margin:'10px',
-        backgroundColor: '#191A1B',
+        ml:'20px',
+        background: 'linear-gradient(to right, #040405 50%, #191A1A 50%)',
         color: 'white',
+        transition: 'all .5s ease-out',
         borderRadius: 'none',
-        fontSize: ['15px', null,'20px', '25px'],
+        fontSize: ['15px', null,'20px','25px' ],
+        backgroundPosition:" right bottom",
+        backgroundSize: '200% 100%',
+        transition: '0.25s',
+      '&:focus': {
+        inset: '-3.5rem 0 0 0 var(--hover)',
+        inset: '3.5rem 0 0 0 var(--hover)',
+       } ,
+        '&:hover': {
+          backgroundPosition: 'left bottom',
+          color: 'white'
+        },
       
       },
   
@@ -114,6 +153,7 @@ const styles = {
 
 
 
+  // #191A1A
 
 const HeroContent = styled.div`
   height: 100vh;

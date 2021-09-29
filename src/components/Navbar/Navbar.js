@@ -1,125 +1,120 @@
- /** @jsxImportSource theme-ui */
+/** @jsxImportSource theme-ui */
 import React, { useState } from "react";
-import {Link} from 'react-scroll';
-import styled from 'styled-components';
-import NavItems from './NavbarData';
+import { Link } from "react-scroll";
+import styled from "styled-components";
+import NavItems from "./NavbarData";
 import Sticky from "react-stickynode";
-import {Button,} from "@chakra-ui/react";
-import { Box, Text } from "@chakra-ui/react"
-import {Image} from 'theme-ui'
-import {AiFillHome as Home} from 'react-icons/ai';
+import { Button } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
+import { Image } from "theme-ui";
+import { AiFillHome as Home } from "react-icons/ai";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
 
   const handleStateChange = (status) => {
-    if(status.status === Sticky.STATUS_FIXED){
-        setIsSticky(true);
-    }else if(status.status === Sticky.STATUS_ORIGINAL) {
-        setIsSticky(false)
+    if (status.status === Sticky.STATUS_FIXED) {
+      setIsSticky(true);
+    } else if (status.status === Sticky.STATUS_ORIGINAL) {
+      setIsSticky(false);
     }
-};
+  };
 
-
-
-const topStyles = {
-  left: {
-  display: 'flex',
-
-  }
-}
+  const topStyles = {
+    left: {
+      display: "flex",
+    },
+  };
 
   return (
     <Sticky>
-    <Nav>
-<LeftHeader>
-  <Image src='/Logo.png' alt='logo' sx={imageStyle}/>
-</LeftHeader>
-      <Hamburger onClick={() => setIsOpen(!isOpen)}>
-        <span />
-        <span />
-        <span />
-        <span />
-      </Hamburger>
-      <Menu isOpen={isOpen}>
-{NavItems.map((item, index) => (
-<LinkItem key={index} style={{cursor: 'pointer'}}>
-  <Link key={index}
-  activeClass='active'
-  to={item.path}
-  spy={true}
-  smooth={true}
-  offset={-70}
-  duration={500}
-  >
-    {item.label}
-  </Link>
-  </LinkItem>
-))}
-       <Button bg='#AD0441' fontSize='15px' p='4' color='white' sx={buttonStyles.main}>
-          <Link to="/login" >
-           Get A Quote
-          </Link>
+      <Nav>
+        <LeftHeader>
+          <Image src="/Logo.png" alt="logo" sx={styles.img} />
+        </LeftHeader>
+        <Hamburger onClick={() => setIsOpen(!isOpen)}>
+          <span />
+          <span />
+          <span />
+          <span />
+        </Hamburger>
+        <Menu isOpen={isOpen}>
+          {NavItems.map((item, index) => (
+            <LinkItem key={index} style={{ cursor: "pointer" }}>
+              <Link
+                key={index}
+                sx={styles.link}
+                activeClass="active"
+                to={item.path}
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                {item.label}
+              </Link>
+            </LinkItem>
+          ))}
+          <Button 
+          bg="#AD0441" 
+          sx={styles.button}>
+            <Link to="/login">Get A Quote</Link>
           </Button>
-      </Menu>
-    </Nav>
+        </Menu>
+      </Nav>
     </Sticky>
   );
 }
 
 export default Navbar;
 
+const styles = {
+  link: {
+    fontSize: ["22px"],
+    fontWeight: "medium",
+    color: 'orange',
+    '&:hover': {
+      color: 'orange',
+    },
+  },
+  button: {
+    fontSize: ["15px"],
+    fontWeight: "medium",
+    color: "white",
+    p: "25px",
+  },
+  img: {
+    height: "200px",
+    width: "140px",
+    mt: "40px",
+  },
+};
 
-const buttonStyles = {
-  main: {
-  fontSize: ['15', null,null,null,'20px']
-}
-}
-
-const imageStyle = {
-  height: '200px',
-  width: '140px',
-  mt:  '40px',
-}
-
-
+// CLEAN UP LATER
 
 const LinkItem = styled.div`
-padding: 6px;
-color: white;
-margin: 20px;
-font-family: 'Barlow Condensed', sans-serif;
-font-weight: light;
-font-size: 20px;
-
-
-@media(min-width: 1500px) {
-  font-size: 25px;
-}
-`
+  padding: 6px;
+  color: white;
+  margin: 20px;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: light;
+  font-size: 20px;
+`;
 
 const LeftHeader = styled.div`
-display:flex;
-align-items:center;
-justify-content: center;
-height: 90px;
-text-align:center;
-`
-
-
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90px;
+  text-align: center;
+`;
 
 export const Nav = styled.div`
-
   display: flex;
   flex-direction: row;
-justify-content: space-between;
+  justify-content: space-between;
   flex-wrap: wrap;
-
-
-
-
 `;
 
 export const Hamburger = styled.div`
@@ -128,7 +123,6 @@ export const Hamburger = styled.div`
   display: none;
   margin-right: 30px;
   margin-top: 35px;
-  
 
   span {
     height: 2px;
@@ -156,7 +150,6 @@ export const Menu = styled.div`
   align-items: center;
   position: relative;
 
-
   @media (max-width: 1000px) {
     overflow: hidden;
     display: flex;
@@ -166,14 +159,9 @@ export const Menu = styled.div`
     width: 100%;
   }
 
-  @media(min-width: 1500px) {
+  @media (min-width: 1700px) {
     margin-right: 200px;
   }
-
-
-
-
-
 `;
 
 export const MenuLink = styled.a`
@@ -234,9 +222,7 @@ export const MenuButton = styled.a`
     text-decoration: none;
   }
 
- .nav-buttons:hover {
+  .nav-buttons:hover {
     color: red;
   }
 `;
-
-
