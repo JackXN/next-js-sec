@@ -14,7 +14,7 @@ background-size: cover;
 background-repeat: no-repeat;
 background-attachment: fixed;
 background-position: center;
-height: 200vh;
+height: 100%h;
 width: 100%;
 `
 
@@ -46,7 +46,6 @@ export default function Home() {
       <DarkLayer>
 <Navbar/>
   <HeroSection/>
-  <Slider/>
 </DarkLayer>
 </Container>
   </>

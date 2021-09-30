@@ -1,7 +1,6 @@
 import React from 'react'
 import {Flex,Container, Box, StylesProvider, Grid} from '@chakra-ui/react';
-import { LockIcon } from "@chakra-ui/icons";
-import { BiShield as Shield } from "react-icons/bi";
+
 import ServiceCardColumn from './ServiceCardColumn';
 
 
