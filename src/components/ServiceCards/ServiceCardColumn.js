@@ -13,16 +13,18 @@ import {
 import {Image} from '@chakra-ui/react';
 import { BiCheckShield as Shield } from "react-icons/bi";
 
-function ServiceCardColumn({ src, altText = "default alt text", title, text }) {
+function ServiceCardColumn({ src, altText = "default", title, text }) {
   return (
+    <Box sx={styles.wrapper}>
     <Box sx={styles.card}>
       <Box sx={styles.upperText}>
       <Image src={src}  alt="icon" sx={styles.img}/>
-          <Heading >{title}</Heading>
+          <Heading sx={styles.heading}>{title}</Heading>
         <Box>
           <Text as='p' sx={styles.description} >{text}</Text>
         </Box>
       </Box>
+    </Box>
     </Box>
   );
 }
@@ -37,19 +39,44 @@ textAlign: 'center',
 color: 'white',
 margin: ['20px'],
 background:'#120E14',
-padding: '20px',
+padding: ['20px','30px',],
 borderRadius: '5px',
+boxShadow: 'inset 0 0 0 0 #D80286',
+    webkitTransition: "ease-out 0.4s",
+    // background: ' linear-gradient(90deg, rgba(173,4,63,1) 44%, rgba(200,35,78,1) 81%);'
+    background: 'linear-gradient(to right, rgba(0,0,0,0.4) 50%, rgb(16, 12, 16) 50%)',
+  mozTransition: "ease-out 0.4s",
+  transition: " all ease-out 0.4s",
+  backgroundPosition:" right bottom",
+  backgroundSize: '200% 100%',
+  '&:focus': {
+          inset: '-3.5rem 0 0 0 var(--hover)',
+          inset: '3.5rem 0 0 0 var(--hover)',
+         } ,
+         '&:hover': {
+          backgroundPosition: 'left bottom',
+          color: 'white',
+          cursor: 'pointer',
+        },
   },
+
   upperText: {
     display: 'flex',
     flexDirection: 'column',
   },
   img: {
-    height: ['30px'],
+    height: ['80px','80px'],
     mb: '10px',
   },
   description: {
     mt: '20px',
+    maxWidth: '300px',
+  },
+  wrapper: {
+   
+  },
+  heading: {
+
   }
 }
 

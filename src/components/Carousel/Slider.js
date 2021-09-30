@@ -1,33 +1,11 @@
-import React,{useRef,useState} from 'react';
-
-// Import Swiper React components
-
-import "swiper/css";
-
-const styles = {
-container: {
-    height: '500px',
-},
-item: {
-
-}, 
-slider: {
-    height: '200px',
-}
-}
-
+import React from 'react'
 
 function Slider() {
     return (
-<div className="my-slider">
-  <div>item</div>
-  <div>item</div>
-  <div>item</div>
-</div>
-
+        <div>
+            
+        </div>
     )
 }
-
-
 
 export default Slider
