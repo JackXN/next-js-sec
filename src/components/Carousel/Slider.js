@@ -3,8 +3,32 @@ import Carousel from 'react-elastic-carousel';
 import {Container, Box, Flex, Image, Text} from '@chakra-ui/react';
 
 
-const imageOne = '/subscription.svg'
-const Beha = '/images/Behavr.png'
+
+const Behavr = "/images/Behavr.png";
+const Fid = "/images/Fid.png";
+const Patient = "/images/PatientCare.png";
+const Wake = "/images/WakeForest.png";
+const Clear = '/images/Clear.png';
+
+
+const data = [
+    {
+      id: 1,
+      imageSrc: Behavr,
+    },
+    {
+      id: 2,
+      imageSrc: Fid,
+    },
+    {
+      id: 3,
+      imageSrc: Patient,
+    },
+    {
+      id: 4,
+      imageSrc: Wake,
+    },
+  ];
 
 function Slider() {
     return (
@@ -18,20 +42,18 @@ enableMouseSwipe={true}
 style={{color: 'orange'}}
 >
     <Box sx={styles.caro}>
-        < Image  draggable={false} src={Beha}/>
+        <Image src={Behavr}/>
     </Box>
     <Box sx={styles.caro}>
-        <Image draggable={false} src={Beha}/>
+        <Image src={Clear} sx={styles.clear}/>
     </Box>
     <Box sx={styles.caro}>
-        <Image draggable={false} src={Beha}/>
+        <Image src={Patient}/>
     </Box>
     <Box sx={styles.caro}>
-        <Image draggable={false} src={Beha}/>
+        <Image src={Wake}/>
     </Box>
-    <Box sx={styles.caro}>
-        <Image draggable={false} src={Beha}/>
-    </Box>
+
 </Carousel>
          </Box>
        </Container>
@@ -54,6 +76,9 @@ const styles = {
         '&:hover': {
             cursor: 'pointer'
         }
+    },
+    clear: {
+        mt: '95',
     }
 }
 
