@@ -44,7 +44,7 @@ borderRadius: '5px',
 boxShadow: 'inset 0 0 0 0 #D80286',
     webkitTransition: "ease-out 0.4s",
     // background: ' linear-gradient(90deg, rgba(173,4,63,1) 44%, rgba(200,35,78,1) 81%);'
-    background: 'linear-gradient(to right, rgba(0,0,0,0.4) 50%, rgb(16, 12, 16) 50%)',
+    background: 'linear-gradient(to right, rgba(173,4,63,1)  50%, rgb(16, 12, 16) 50%)',
   mozTransition: "ease-out 0.4s",
   transition: " all ease-out 0.4s",
   backgroundPosition:" right bottom",
