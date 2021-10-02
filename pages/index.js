@@ -65,12 +65,6 @@ export default function Home() {
   <HeroSection/>
   </DarkLayer>
   </Container>
-<Wrapper>
-<Slider/>
-</Wrapper>
-
-
-
   </>
   )
 }
