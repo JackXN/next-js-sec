@@ -30,8 +30,10 @@ background-size: cover;
 `
 
 const Wrapper = styled.div`
-height:200px;
-background:blue;
+height: 100%;
+background: #ffff;
+position: relative;
+bottom: 100px;
 `
 
 
@@ -50,17 +52,18 @@ export default function Home() {
     </Head>
 
 
+
     <Container>
       <DarkLayer>
 <Navbar/>
   <HeroSection/>
   </DarkLayer>
-  
-
-</Container>
+  </Container>
 <Wrapper>
-  <Test/>
+<Slider/>
 </Wrapper>
+
+
 
   </>
   )
