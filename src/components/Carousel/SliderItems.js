@@ -3,7 +3,7 @@ import Carousel from "react-elastic-carousel";
 import { Container, Box, Flex, Image, Text } from "@chakra-ui/react";
 
 const Behavr = "/images/Behavr.png";
-const Fid = "/images/Fid.png";
+const Fid = "/images/Fid.png";å
 const Patient = "/images/PatientCare.png";
 const Wake = "/images/WakeForest.png";
 
@@ -27,7 +27,10 @@ const data = [
 ];
 
 function SliderItems() {
-  return <Container></Container>;
+  return 
+  <Container>
+
+  </Container>;
 }
 
 export default SliderItems;

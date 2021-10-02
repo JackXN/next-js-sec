@@ -4,6 +4,8 @@ import {Container, Box, Flex, Image, Text} from '@chakra-ui/react';
 
 
 
+
+
 const Behavr = "/images/Behavr.png";
 const Fid = "/images/Fid.png";
 const Patient = "/images/PatientCare.png";
@@ -32,8 +34,10 @@ const data = [
 
 function Slider() {
     return (
+        
        <Container sx={styles.container}>
          <Box sx={styles.wrapper}>
+             <Text as='h1'>Proudly Trusted By: </Text>
 <Carousel 
 focusOnSelect={true}
 enableSwipe={true}
@@ -63,9 +67,17 @@ style={{color: 'orange'}}
 
 const styles = { 
     container: {
-      mt: '300px',
-      background: 'transparent',
-       
+        background:'gray',
+    },
+    wrapper: {
+        display: 'flex',
+        flexDirection: 'column',
+        textAlign:'center',
+        fontFamily: 'Barlow Condensed,sans-serif',
+        fontWeight: 'bolder',
+        fontSize: ['35px'],
+        width: '100%',
+        color:'white',
     },
     caro: {
         display: 'flex',

@@ -10,6 +10,9 @@ const imageTwo = '/partner.svg'
 const imageThree = '/subscription.svg'
 
 
+
+
+
 const data  = [
     {
       id: 1,

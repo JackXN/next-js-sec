@@ -41,7 +41,7 @@ function Navbar() {
         </Hamburger>
         <Menu isOpen={isOpen}>
           {NavItems.map((item, index) => (
-            <LinkItem key={index} style={{ cursor: "pointer" }}>
+            <LinkItem key={index} style={{ cursor: "pointer", }}>
               <Link
                 key={index}
                 sx={styles.link}
@@ -71,16 +71,15 @@ export default Navbar;
 
 const styles = {
   link: {
-    fontSize: ["22px"],
-    fontWeight: "medium",
+    fontSize: ["15px"],
+    fontFamily: 'Rubik, sans-serif',
+    fontWeight: "400",
     color: 'orange',
-    '&:hover': {
-      color: 'orange',
-    },
   },
   button: {
     fontSize: ["15px"],
-    fontWeight: "medium",
+    fontWeight: "400",
+    fontFamily: 'Rubik,sans-serif',
     color: "white",
     p: "25px",
   },

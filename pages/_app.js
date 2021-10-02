@@ -1,6 +1,6 @@
 import  {ChakraProvider} from '@chakra-ui/react';
 import theme from '../src/theme/index';
-
+import "../public/styles/Slider.css"
 
 function MyApp({ Component, pageProps }) {
   return (

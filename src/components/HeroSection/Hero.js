@@ -28,7 +28,6 @@ const HeroData = {
 function Hero() {
   return (
     <HeroContainer>
-
       <Flex sx={styles.flexContainer}>
       <Text as="p" sx={styles.top}>
         {HeroData.titleOne.text}
@@ -78,19 +77,21 @@ const styles = {
       pb: "20px",
       color: "white",
       mt: "20px",
-      fontSize: ['10px','15px',null,'15px'],
-      fontWeight: "bold",
+      fontSize: ['16px', '18px'],
+      fontWeight: "400",
       text:'center',
-      ml: [null,'10px']
+      ml: [null,'10px'],
+      fontFamily: 'Rubik, sans-serif'
     },
     title: {
-      fontSize: ['40px', '45px', '80px'],
+      fontSize: ['35px','80px', '80px'],
       lineHeight: ['42px', '50px', '90px'],
       fontWeight: "black",
     },
     description: {
-      fontSize: ['25px', null, '25px', '20px', '30px'],
-      fontWeight: "medium",
+      fontSize: ['15px', '16px'],
+      fontFamily: 'Rubik, sans-serif',
+      fontWeight: "400",
       maxWidth: ["650px", '900px'],
       mt: "25px",
     },
@@ -106,7 +107,7 @@ const styles = {
       },
       primary: {
         padding: '25px',
-        margin:'10px',
+        margin:'10px',  
         ml:'-20px',
         background: 'linear-gradient(to right, #040405 50%, #AD0541 50%)',
         color: 'white',
@@ -155,13 +156,8 @@ const styles = {
 
   // #191A1A
 
-const HeroContent = styled.div`
-  height: 100vh;
-  width: 100%;
-`;
-
 const HeroContainer = styled.div`
   height: 100%;
   width: 100%;
-  background: transparent;
+
 `;

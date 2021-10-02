@@ -15,7 +15,6 @@ import { BiCheckShield as Shield } from "react-icons/bi";
 
 function ServiceCardColumn({ src, altText = "default", title, text }) {
   return (
-    <Box sx={styles.wrapper}>
     <Box sx={styles.card}>
       <Box sx={styles.upperText}>
       <Image src={src}  alt="icon" sx={styles.img}/>
@@ -25,26 +24,27 @@ function ServiceCardColumn({ src, altText = "default", title, text }) {
         </Box>
       </Box>
     </Box>
-    </Box>
+    
   );
 }
 
 const styles = {
   card: {
-height: '100%',
+maxHeight: '500px',
 display: 'flex',
 alignItems: 'center',
 justifyContent: 'center',
 textAlign: 'center',
 color: 'white',
 margin: ['20px'],
+mt:['20px', '50px', '100px'],
 background:'#120E14',
 padding: ['20px','30px',],
 borderRadius: '5px',
 boxShadow: 'inset 0 0 0 0 #D80286',
     webkitTransition: "ease-out 0.4s",
     // background: ' linear-gradient(90deg, rgba(173,4,63,1) 44%, rgba(200,35,78,1) 81%);'
-    background: 'linear-gradient(to right, rgba(173,4,63,1)  50%, rgb(16, 12, 16) 50%)',
+    background: 'linear-gradient(to right, rgba(173,4,63,1)  50%, rgba(16, 12, 16,) 50%)',
   mozTransition: "ease-out 0.4s",
   transition: " all ease-out 0.4s",
   backgroundPosition:" right bottom",
@@ -59,7 +59,11 @@ boxShadow: 'inset 0 0 0 0 #D80286',
           cursor: 'pointer',
         },
   },
+  heading: {
+fontFamily: 'Barlow, sans-serif',
+fontSize: ['20px', '25px'],
 
+  },
   upperText: {
     display: 'flex',
     flexDirection: 'column',
@@ -71,13 +75,13 @@ boxShadow: 'inset 0 0 0 0 #D80286',
   description: {
     mt: '20px',
     maxWidth: '300px',
+    fontSize: ['15px',],
+    fontFamily: 'Barlow, sans-serif',
+    fontWeight: '400',
   },
   wrapper: {
    
   },
-  heading: {
-
-  }
 }
 
 
