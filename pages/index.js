@@ -31,9 +31,15 @@ background-size: cover;
 
 const Wrapper = styled.div`
 height: 100%;
-background: #ffff;
 position: relative;
-bottom: 100px;
+bottom: 200px;
+background-image: url('/HackerTwo.jpeg');
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+background-attachment: none;
+
+
 `
 
 

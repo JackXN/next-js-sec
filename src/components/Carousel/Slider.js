@@ -3,7 +3,7 @@ import Carousel from 'react-elastic-carousel';
 import {Container, Box, Flex, Image, Text} from '@chakra-ui/react';
 import "./Slider.module.css"
 import Item from './Item';
-
+import styled from 'styled-components';
 
 
 const Behavr = "/images/Behavr.png";
@@ -38,20 +38,31 @@ const breakPoints = [
 ]
 
 
+const DarkLayer = styled.div`
+height: 100%;
+width: 100%;
+background-color:red;
+
+`
+
 
 function Slider() {
     return (
-        
+    
 <section style={{height: '59px'}}>
+<DarkLayer>
          <Box sx={styles.wrapper}>
              <Text as='h1' sx={styles.text}>Proudly Trusted By: </Text>
 <Carousel 
 style={{
-    height: '10%',
-display: 'flex',
-marginBottom: '20px',
+    // height: '10%',
+// display: 'flex',
+marginBottom: '200px',
+textAlign:'center',
 justify: 'center',
-alignItems: 'center',
+// alignItems: 'center',
+// background: 'rgba(31,33,33, 0.2)',
+// background: 'white',
 }}
 enableAutoPlay={true}
 showArrows={false}
@@ -65,7 +76,9 @@ breakPoints={breakPoints}
 ))}
 </Carousel>
          </Box>
+         </DarkLayer>
        </section>
+
     )
 }
 
@@ -80,6 +93,10 @@ const styles = {
         fontSize: ['35px'],
         width: '100%',
         mt: '200px',
+        backgroundImage: "url('/HackerTwo.jpeg')",
+    backgroundAttachment: 'fixed',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
         
     },
     caro: {
@@ -96,10 +113,11 @@ const styles = {
         cursor: 'grab',
         '&:hover': {
             cursor: 'grab'
-        }
+        },
+    
     },
     text: {
-        color: 'Black',
+        color: 'white',
         pb: '100px',
         fontSize: ['50px', '50px']
     }
