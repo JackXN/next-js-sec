@@ -10,81 +10,78 @@ import {
   Heading,
   Text,
 } from "@chakra-ui/react";
-import {Image} from '@chakra-ui/react';
+import { Image } from "@chakra-ui/react";
 import { BiCheckShield as Shield } from "react-icons/bi";
 
 function ServiceCardColumn({ src, altText = "default", title, text }) {
   return (
     <Box sx={styles.card}>
       <Box sx={styles.upperText}>
-      <Image src={src}  alt="icon" sx={styles.img}/>
-          <Heading sx={styles.heading}>{title}</Heading>
+        <Image src={src} alt="icon" sx={styles.img} />
+        <Heading sx={styles.heading}>{title}</Heading>
         <Box>
-          <Text as='p' sx={styles.description} >{text}</Text>
+          <Text as="p" sx={styles.description}>
+            {text}
+          </Text>
         </Box>
       </Box>
     </Box>
-    
   );
 }
 
 const styles = {
   card: {
-maxHeight: '500px',
-display: 'flex',
-alignItems: 'center',
-justifyContent: 'center',
-textAlign: 'center',
-color: 'white',
-margin: ['20px'],
-mt:['20px', '50px', '100px'],
-background:'#120E14',
-padding: ['20px','30px',],
-borderRadius: '5px',
-boxShadow: 'inset 0 0 0 0 #D80286',
+    maxHeight: "500px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    textAlign: "center",
+    color: "white",
+    margin: ["20px"],
+    mt: ["20px", "50px", "100px"],
+    background: "#120E14",
+    padding: ["20px", "30px"],
+    borderRadius: "5px",
+    boxShadow: "inset 0 0 0 0 #D80286",
     webkitTransition: "ease-out 0.4s",
     // background: ' linear-gradient(90deg, rgba(173,4,63,1) 44%, rgba(200,35,78,1) 81%);'
-    background: 'linear-gradient(to right, rgba(173,4,63,1)  50%, rgba(16, 12, 16,) 50%)',
-  mozTransition: "ease-out 0.4s",
-  transition: " all ease-out 0.4s",
-  backgroundPosition:" right bottom",
-  backgroundSize: '200% 100%',
-  '&:focus': {
-          inset: '-3.5rem 0 0 0 var(--hover)',
-          inset: '3.5rem 0 0 0 var(--hover)',
-         } ,
-         '&:hover': {
-          backgroundPosition: 'left bottom',
-          color: 'white',
-          cursor: 'pointer',
-        },
+    background:
+      "linear-gradient(to right, rgba(173,4,63,1)  50%, rgba(16, 12, 16,) 50%)",
+    mozTransition: "ease-out 0.4s",
+    transition: " all ease-out 0.4s",
+    backgroundPosition: " right bottom",
+    backgroundSize: "200% 100%",
+    "&:focus": {
+      inset: "-3.5rem 0 0 0 var(--hover)",
+      inset: "3.5rem 0 0 0 var(--hover)",
+    },
+    "&:hover": {
+      backgroundPosition: "left bottom",
+      color: "white",
+      cursor: "pointer",
+    },
   },
   heading: {
-fontFamily: 'Barlow, sans-serif',
-fontSize: ['20px', '25px'],
-
+    fontFamily: "Barlow, sans-serif",
+    fontSize: ["20px", "25px"],
   },
   upperText: {
-    display: 'flex',
-    flexDirection: 'column',
+    display: "flex",
+    flexDirection: "column",
   },
   img: {
-    height: ['80px','80px'],
-    mb: '10px',
+    height: ["80px", "80px"],
+    mb: "10px",
   },
   description: {
-    mt: '20px',
-    maxWidth: '300px',
-    fontSize: ['15px',],
-    fontFamily: 'Barlow, sans-serif',
-    fontWeight: '400',
+    mt: "20px",
+    maxWidth: "300px",
+    fontSize: ["15px"],
+    fontFamily: "Barlow, sans-serif",
+    fontWeight: "400",
   },
-  wrapper: {
-   
-  },
-}
-
-
+  wrapper: {},
+};
 
 // const styles = {
 //   card: {
