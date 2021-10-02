@@ -71,10 +71,6 @@ breakPoints={breakPoints}
 
 
 const styles = { 
-    container: {
-     background: 'orange',
-      
-    },
     wrapper: {
         display: 'flex',
         flexDirection: 'column',
@@ -83,8 +79,7 @@ const styles = {
         fontWeight: 'bolder',
         fontSize: ['35px'],
         width: '100%',
-       
-        mt: '100px',
+        mt: '200px',
         
     },
     caro: {
@@ -106,6 +101,7 @@ const styles = {
     text: {
         color: 'Black',
         pb: '100px',
+        fontSize: ['50px', '50px']
     }
 
 }
