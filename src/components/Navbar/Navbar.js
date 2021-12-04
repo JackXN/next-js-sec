@@ -75,6 +75,11 @@ const styles = {
     fontFamily: 'Rubik, sans-serif',
     fontWeight: "400",
     color: 'orange',
+
+'&:hover': {
+cursor: 'pointer',
+color: 'orange',
+}
   },
   button: {
     fontSize: ["15px"],
