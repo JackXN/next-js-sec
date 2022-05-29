@@ -187,7 +187,7 @@ margin: 10px;
 }
 
 @media(min-width: 1500px) {
-
+ 
 }
 
 @media(min-width: 1800px) {
